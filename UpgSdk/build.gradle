@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+
+//com.asianinfo.csc:upgsdk:1.0.0
+//Xulong123/maven/upgsdk
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/fastjson-1.1.17.jar')
+}
+
+apply from: "bintrayUpload.gradle"
+
+//
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'upgsdk'
+//
+//    publishedGroupId = 'com.asianinfo.csc'
+//    libraryName = 'UpgSdk'
+//    artifact = 'upgsdk'
+//
+//    libraryDescription = 'upg 支付 sdk'
+//
+//    siteUrl = 'https://github.com/longyuan5/upgsdk'
+//    gitUrl = 'https://github.com/longyuan5/upgsdk.git'
+//
+//    libraryVersion = '1.0.0'
+//
+//    developerId = 'xulong'
+//    developerName = 'xulong'
+//    developerEmail = '1575066083@qq.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+//
+//
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
